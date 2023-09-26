@@ -21,4 +21,7 @@ int main()
   bool 1
   double 8*/
   cout << sizeof(bool);
+
+  int x = 'x';
+  cout << x << endl;
 }
