@@ -23,5 +23,8 @@ int main()
   cout << sizeof(bool);
 
   int x = 'x';
-  cout << x << endl;
+  cout << x << endl; // x will print the ASCII Value of x
+
+  char abc = 85;
+  cout << abc << endl; // abc will store the character of ASCII Value 85
 }
