@@ -1,3 +1,4 @@
+#include <cstdint>
 class Solution
 {
 public:
