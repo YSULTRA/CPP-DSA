@@ -1,20 +1,21 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+// Check wether middle is the possible solution
 
 bool isPossible(vector<int> &arr, int n, int m, int middle)
 {
-  int studentCount = 1;
+  int studentCount = 1; // intially students is one
   int sumofPages = 0;
   for (int i = 0; i < n; i++)
   {
-    if (arr[i] + sumofPages <= middle)
+    if (arr[i] + sumofPages <= middle) // if sum of pages and new book is less then middle
     {
       sumofPages += arr[i];
     }
     else
     {
-      studentCount++;
+      studentCount++; // increment count of students
       if (studentCount > m || arr[i] > middle)
       {
         return false;
@@ -55,5 +56,6 @@ int findPages(vector<int> &arr, int n, int m)
 int main()
 {
   vector<int> arr = {25, 46, 28, 49, 24};
+  cout << findPages(arr, 5, 4) << endl;
   cout << findPages(arr, 5, 4);
 }
